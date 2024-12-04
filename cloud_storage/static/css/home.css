@@ -1,0 +1,71 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.hamburger {
+    display: none; /* Hidden by default */
+    font-size: 30px;
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide links by default */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Position them absolutely */
+        top: 60px; /* Position below the navbar */
+        left: 0; /* Align to the left */
+        background-color: #333; /* Same background as navbar */
+        width: 100%; /* Full width */
+        padding: 10px 0; /* Padding for links */
+        z-index: 1; /* Ensure it appears above other content */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when active */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger icon on mobile */
+        cursor: pointer; /* Pointer cursor on hover */
+    }
+}
+
+/* Content styling for demonstration purposes */
+.content {
+    padding: 20px;
+}
