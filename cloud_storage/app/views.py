@@ -46,8 +46,8 @@ def register(req):
 
 def upload(req):
     if req.method=='POST':
-        file=req.FILES['image']
-        data=Cloud.objects.create(img=file)
+        files=req.FILES['file']
+        data=Cloud.objects.create(all=files)
         data.save()
         return redirect(cloud_home)
     else:
